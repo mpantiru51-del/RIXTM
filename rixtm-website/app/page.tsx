@@ -16,8 +16,8 @@ export default function Home() {
       <section className="poster-frame">
         <img
           className="exact-artwork"
-          src="/rixtm-exact.jpeg"
-          alt="Pagina oficială RIXTM: Security, Innovation, Growth — Invest, Earn, Grow"
+          src="/logo.png"
+          alt="Logo oficial RIXTM"
           draggable={false}
         />
       </section>
