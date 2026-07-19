@@ -4,6 +4,7 @@
   "description": "RIXTM cryptocurrency",
   "main": "index.js",
   "scripts": {
+    "test": "hardhat test",
     "start": "node index.js"
   },
   "author": "Marian Pantiru",

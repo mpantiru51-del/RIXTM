@@ -25,6 +25,12 @@
   for Mainnet
 - Multisig preparation: [docs/MULTISIG_SETUP.md](docs/MULTISIG_SETUP.md)
 
+## Local testing
+
+Run `npm test` to compile the contracts and execute all unit and deterministic
+invariant tests. The invariant suite checks the permanent supply cap and
+balance conservation after 240 randomized transfer, burn, and mint operations.
+
 ## Security notice
 
 RIXTM is currently a testnet deployment and has no real monetary value. Etherscan
