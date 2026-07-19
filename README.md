@@ -11,6 +11,9 @@
 - Contract: `0x274C858E052A7566F645d9C1918ACe26d5CC821d`
 - Verified source: https://sepolia.etherscan.io/address/0x274C858E052A7566F645d9C1918ACe26d5CC821d#code
 - Maximum supply: 100,000,000 RIXTM
+- Supply policy: flexible below the fixed cap; the owner may replace burned
+  supply but can never exceed 100,000,000 RIXTM
+- Tokenomics: [docs/TOKENOMICS.md](docs/TOKENOMICS.md)
 
 ## Security notice
 

@@ -26,9 +26,11 @@ As checked on 2026-07-19, the Sepolia owner is the EOA wallet
 The deployed contract is not upgradeable, so code-level ownership changes
 would require a new deployment.
 
+The supply policy is intentionally flexible below the fixed cap: the owner may
+replace burned supply, but total supply can never exceed 100,000,000 RIXTM.
 Before Mainnet, ownership should use a reviewed multisig policy and a two-step
-ownership-transfer mechanism. The intended behavior of minting after burns,
-pausing, and ownership renunciation must also be decided and documented.
+ownership-transfer mechanism. The intended behavior of pausing and ownership
+renunciation must still be decided and documented.
 
 See [the Mainnet readiness checklist](docs/MAINNET_CHECKLIST.md) for the full
 set of launch blockers.
@@ -43,4 +45,3 @@ issue before a fix or mitigation is available.
 
 Never include private keys, seed phrases, API keys, or other secrets in a
 report.
-

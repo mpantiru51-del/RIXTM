@@ -16,7 +16,8 @@ promoted as a Mainnet-ready audited asset.
 
 ## Token model decisions
 
-- [ ] Decide whether burned RIXTM may be minted again up to the maximum supply.
+- [x] Use a flexible supply below the fixed cap: burned RIXTM may be minted
+      again, but total supply can never exceed 100,000,000 RIXTM.
 - [ ] Decide whether pausing transfers remains necessary on Mainnet.
 - [ ] Decide whether ownership may ever be renounced.
 - [ ] Publish the final token allocation, treasury, vesting, and circulation
@@ -54,4 +55,3 @@ promoted as a Mainnet-ready audited asset.
 - [ ] Transfer ownership to the reviewed multisig and verify acceptance.
 - [ ] Perform small-value operational tests before wider distribution.
 - [ ] Publish the official Mainnet address through the website and GitHub.
-
