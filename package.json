@@ -17,11 +17,16 @@
     "@openzeppelin/contracts": "^5.6.1"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^7.0.0",
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.7",
     "dotenv": "^17.4.2",
     "ethers": "^6.17.0",
-    "hardhat": "^3.9.0"
+    "hardhat": "^3.10.0",
+    "typescript": "~6.0.3"
+  },
+  "overrides": {
+    "@actions/http-client": "4.0.1",
+    "adm-zip": "0.6.0",
+    "lodash-es": "4.18.1"
   },
   "type": "module"
 }

@@ -36,6 +36,9 @@ jobs:
       - name: Audit production dependencies
         run: npm audit --omit=dev
 
+      - name: Type-check contract tooling
+        run: npx tsc --noEmit
+
       - name: Run production contract tests
         run: npm test -- --build-profile production
 
