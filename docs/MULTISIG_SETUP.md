@@ -30,6 +30,9 @@ files.
 
 Before any Mainnet use:
 
+Follow the guarded commands and evidence template in the
+[complete Sepolia rehearsal runbook](SEPOLIA_REHEARSAL.md).
+
 1. Select and independently verify the three signer addresses.
 2. Create a 2-of-3 multisig on Ethereum Sepolia using a reviewed implementation.
 3. Fund it only with the small amount of Sepolia ETH required for testing.

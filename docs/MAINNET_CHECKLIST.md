@@ -41,6 +41,7 @@ promoted as a Mainnet-ready audited asset.
 - [x] Add tests for two-step ownership transfer and flexible capped supply.
 - [x] Finalize and test the ownership-renunciation policy.
 - [x] Add invariant tests for the supply cap and balance conservation.
+- [x] Prepare guarded Sepolia rehearsal scripts and an evidence template.
 - [ ] Complete an independent third-party smart-contract audit.
 - [ ] Resolve or formally accept every audit finding.
 - [ ] Rehearse deployment, verification, and ownership transfer on Sepolia.

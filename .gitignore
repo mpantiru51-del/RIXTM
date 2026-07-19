@@ -16,6 +16,7 @@
 # Local and legacy Ignition deployment state
 /ignition/deployments/chain-31337/
 /ignition/deployments/chain-11155111/
+/ignition/deployments/rixtm-mainnet-candidate-sepolia/
 
 # Typechain output
 /types

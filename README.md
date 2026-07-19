@@ -24,6 +24,7 @@
 - Status: local candidate only; not deployed, independently audited, or ready
   for Mainnet
 - Multisig preparation: [docs/MULTISIG_SETUP.md](docs/MULTISIG_SETUP.md)
+- Sepolia rehearsal: [docs/SEPOLIA_REHEARSAL.md](docs/SEPOLIA_REHEARSAL.md)
 
 ## Local testing
 

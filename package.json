@@ -4,6 +4,10 @@
   "description": "RIXTM cryptocurrency",
   "main": "index.js",
   "scripts": {
+    "rehearsal:deploy": "hardhat --network sepolia --build-profile production ignition deploy --deployment-id rixtm-mainnet-candidate-sepolia --verify ignition/modules/RIXTMMainnet.ts",
+    "rehearsal:preflight": "hardhat --network sepolia run scripts/rehearsal-preflight.ts",
+    "rehearsal:propose-owner": "hardhat --network sepolia run scripts/propose-mainnet-ownership.ts",
+    "rehearsal:validate": "hardhat --network sepolia run scripts/validate-mainnet-candidate.ts",
     "test": "hardhat test",
     "start": "node index.js"
   },
