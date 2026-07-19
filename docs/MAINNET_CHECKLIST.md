@@ -18,7 +18,7 @@ promoted as a Mainnet-ready audited asset.
 
 - [x] Use a flexible supply below the fixed cap: burned RIXTM may be minted
       again, but total supply can never exceed 100,000,000 RIXTM.
-- [ ] Decide whether pausing transfers remains necessary on Mainnet.
+- [x] Retain emergency pause protection on Mainnet under multisig control.
 - [ ] Decide whether ownership may ever be renounced.
 - [ ] Publish the final token allocation, treasury, vesting, and circulation
       rules.

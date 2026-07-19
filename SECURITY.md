@@ -28,9 +28,13 @@ would require a new deployment.
 
 The supply policy is intentionally flexible below the fixed cap: the owner may
 replace burned supply, but total supply can never exceed 100,000,000 RIXTM.
+The emergency pause capability will be retained for Mainnet and must be
+controlled by a reviewed multisig under the documented
+[governance policy](docs/GOVERNANCE.md). It must not be used to influence price
+or ordinary market activity.
 Before Mainnet, ownership should use a reviewed multisig policy and a two-step
-ownership-transfer mechanism. The intended behavior of pausing and ownership
-renunciation must still be decided and documented.
+ownership-transfer mechanism. The intended ownership-renunciation policy must
+still be decided and documented.
 
 See [the Mainnet readiness checklist](docs/MAINNET_CHECKLIST.md) for the full
 set of launch blockers.

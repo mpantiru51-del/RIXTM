@@ -14,6 +14,7 @@
 - Supply policy: flexible below the fixed cap; the owner may replace burned
   supply but can never exceed 100,000,000 RIXTM
 - Tokenomics: [docs/TOKENOMICS.md](docs/TOKENOMICS.md)
+- Governance: [docs/GOVERNANCE.md](docs/GOVERNANCE.md)
 
 ## Security notice
 
