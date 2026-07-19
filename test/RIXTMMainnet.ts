@@ -79,6 +79,21 @@ describe("RIXTMMainnet", async function () {
     );
   });
 
+  it("permanently disables ownership renunciation", async function () {
+    const rixtm = await viem.deployContract("RIXTMMainnet");
+
+    await viem.assertions.revertWithCustomError(
+      rixtm.write.renounceOwnership(),
+      rixtm,
+      "OwnershipRenunciationDisabled",
+    );
+
+    assert.equal(
+      (await rixtm.read.owner()).toLowerCase(),
+      owner.account.address.toLowerCase(),
+    );
+  });
+
   it("moves privileged controls to the accepted owner", async function () {
     const rixtm = await viem.deployContract("RIXTMMainnet");
     const nomineeContract = await viem.getContractAt(

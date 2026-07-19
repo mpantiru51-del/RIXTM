@@ -19,7 +19,7 @@
 ## Mainnet candidate
 
 - Source: [contracts/RIXTMMainnet.sol](contracts/RIXTMMainnet.sol)
-- Ownership: OpenZeppelin `Ownable2Step`
+- Ownership: OpenZeppelin `Ownable2Step`; renunciation disabled
 - Planned custody: reviewed 2-of-3 multisig
 - Status: local candidate only; not deployed, independently audited, or ready
   for Mainnet

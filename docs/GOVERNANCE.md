@@ -17,6 +17,12 @@ The current `RIXTMMainnet` candidate implements this two-step process. The
 planned multisig quorum is 2-of-3; signer addresses are not yet selected. See
 [the multisig setup plan](MULTISIG_SETUP.md).
 
+Ownership renunciation is disabled in the Mainnet candidate. Because emergency
+pause and capped replacement minting remain part of the approved token model,
+accidentally renouncing ownership would permanently disable those controls.
+All governance succession must therefore use `transferOwnership` followed by
+`acceptOwnership` from the nominated multisig.
+
 ## Emergency pause policy
 
 The pause capability will be retained for Mainnet as an emergency security
@@ -47,6 +53,6 @@ the permanent maximum of 100,000,000 RIXTM. Every Mainnet mint proposal must
 state the amount, recipient, purpose, and resulting total supply before the
 multisig approves it.
 
-The final signer identities, quorum, and ownership-renunciation policy remain
-Mainnet launch blockers in the
+The final signer identities and operating procedures remain Mainnet launch
+blockers in the
 [readiness checklist](MAINNET_CHECKLIST.md).

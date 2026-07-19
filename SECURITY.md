@@ -11,8 +11,8 @@ value and must not be treated as Mainnet assets.
 
 The repository also contains a separate, undeployed
 [`RIXTMMainnet`](contracts/RIXTMMainnet.sol) candidate. It adds two-step
-ownership transfer but remains unaudited and must not be represented as a live
-or Mainnet-ready contract.
+ownership transfer and disables ownership renunciation, but remains unaudited
+and must not be represented as a live or Mainnet-ready contract.
 
 ## Privileged controls and trust assumptions
 
@@ -39,8 +39,10 @@ controlled by a reviewed multisig under the documented
 [governance policy](docs/GOVERNANCE.md). It must not be used to influence price
 or ordinary market activity.
 Before Mainnet, ownership should use the reviewed 2-of-3 multisig process in
-[the setup plan](docs/MULTISIG_SETUP.md). The intended ownership-renunciation
-policy must still be decided and documented.
+[the setup plan](docs/MULTISIG_SETUP.md). The Mainnet candidate prevents
+ownership renunciation so that its pause and capped replacement-mint controls
+cannot be disabled permanently by accident. Governance succession must use
+the two-step ownership transfer process.
 
 See [the Mainnet readiness checklist](docs/MAINNET_CHECKLIST.md) for the full
 set of launch blockers.

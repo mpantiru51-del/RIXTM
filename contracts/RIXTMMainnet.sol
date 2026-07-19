@@ -9,8 +9,11 @@ import {ERC20Pausable} from "@openzeppelin/contracts/token/ERC20/extensions/ERC2
 
 /// @title RIXTM Mainnet candidate
 /// @notice Fixed maximum supply with owner-controlled replacement minting,
-///         emergency pause protection, and two-step ownership transfers.
+///         emergency pause protection, two-step ownership transfers, and no
+///         ownership renunciation.
 contract RIXTMMainnet is ERC20, ERC20Burnable, ERC20Pausable, Ownable2Step {
+    error OwnershipRenunciationDisabled();
+
     uint256 public constant MAX_SUPPLY = 100_000_000 * 10 ** 18;
 
     constructor() ERC20("RIXTM", "RIXTM") Ownable(msg.sender) {
@@ -28,6 +31,10 @@ contract RIXTMMainnet is ERC20, ERC20Burnable, ERC20Pausable, Ownable2Step {
 
     function unpause() public onlyOwner {
         _unpause();
+    }
+
+    function renounceOwnership() public view override onlyOwner {
+        revert OwnershipRenunciationDisabled();
     }
 
     function _update(address from, address to, uint256 value)
