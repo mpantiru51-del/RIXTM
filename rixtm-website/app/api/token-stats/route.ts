@@ -1,7 +1,16 @@
-import { Contract, JsonRpcProvider, dataSlice, formatUnits, getAddress, id } from "ethers";
+import {
+  Contract,
+  JsonRpcProvider,
+  dataSlice,
+  formatUnits,
+  getAddress,
+  id,
+  type Log,
+} from "ethers";
 
 const CONTRACT_ADDRESS = "0x274C858E052A7566F645d9C1918ACe26d5CC821d";
 const DEPLOYMENT_BLOCK = 11_273_225;
+const MAX_LOG_BLOCK_RANGE = 25_000;
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 const TRANSFER_TOPIC = id("Transfer(address,address,uint256)");
 const RPC_URL =
@@ -18,6 +27,33 @@ function formatTokenAmount(value: bigint) {
   return BigInt(whole).toLocaleString("ro-RO");
 }
 
+async function getTransferLogs(provider: JsonRpcProvider) {
+  const latestBlock = await provider.getBlockNumber();
+  if (latestBlock < DEPLOYMENT_BLOCK) return [];
+
+  const requests: Array<Promise<Log[]>> = [];
+
+  for (
+    let fromBlock = DEPLOYMENT_BLOCK;
+    fromBlock <= latestBlock;
+    fromBlock += MAX_LOG_BLOCK_RANGE
+  ) {
+    requests.push(
+      provider.getLogs({
+        address: CONTRACT_ADDRESS,
+        fromBlock,
+        toBlock: Math.min(
+          fromBlock + MAX_LOG_BLOCK_RANGE - 1,
+          latestBlock,
+        ),
+        topics: [TRANSFER_TOPIC],
+      }),
+    );
+  }
+
+  return (await Promise.all(requests)).flat();
+}
+
 export async function GET() {
   try {
     const provider = new JsonRpcProvider(RPC_URL, 11155111, {
@@ -30,12 +66,7 @@ export async function GET() {
 
     const [totalSupply, logs] = await Promise.all([
       token.totalSupply() as Promise<bigint>,
-      logsProvider.getLogs({
-        address: CONTRACT_ADDRESS,
-        fromBlock: DEPLOYMENT_BLOCK,
-        toBlock: "latest",
-        topics: [TRANSFER_TOPIC],
-      }),
+      getTransferLogs(logsProvider),
     ]);
 
     const balances = new Map<string, bigint>();
