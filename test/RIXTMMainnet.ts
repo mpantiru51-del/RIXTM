@@ -83,7 +83,7 @@ describe("RIXTMMainnet", async function () {
     const rixtm = await viem.deployContract("RIXTMMainnet");
 
     await viem.assertions.revertWithCustomError(
-      rixtm.write.renounceOwnership(),
+      rixtm.read.renounceOwnership(),
       rixtm,
       "OwnershipRenunciationDisabled",
     );
