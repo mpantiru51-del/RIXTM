@@ -21,7 +21,7 @@
     "dotenv": "^17.4.2",
     "ethers": "^6.17.0",
     "hardhat": "^3.10.0",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   },
   "overrides": {
     "@actions/http-client": "4.0.1",
