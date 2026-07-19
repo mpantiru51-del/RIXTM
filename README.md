@@ -1,11 +1,11 @@
-# Nexora 
+# RIXTM
 
 ## Vision
-Nexora is a modern blockchin ecosystem
+RIXTM is a modern blockchain ecosystem.
 
 ## Token
-Name: Nexora 
-Symbol: NEX
+Name: RIXTM
+Symbol: RIXTM
 
 ## Mission
-Build a secure cryptocurrency and ecosystem used worldwide 
+Build a secure cryptocurrency and ecosystem used worldwide.
