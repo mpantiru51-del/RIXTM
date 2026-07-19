@@ -1,7 +1,7 @@
 {
-  "name": "nexora",
+  "name": "rixtm",
   "version": "1.0.0",
-  "description": "Nexora cryptocurrency",
+  "description": "RIXTM cryptocurrency",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
