@@ -1,0 +1,9 @@
+.env*
+.next
+.npm-cache
+.vercel-auth
+.vercel-cli-cache
+.vercel-cli-data
+node_modules
+npm-debug.log*
+*.pem
