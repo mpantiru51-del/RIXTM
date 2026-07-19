@@ -51,9 +51,9 @@ export default function Home() {
           rel="noreferrer"
         >
           <span>SECURITATE</span>
-          <strong>ERC-20 Standard</strong>
-          <small>OpenZeppelin Contract · Solidity ^0.8.x</small>
-          <i>Vezi contractul ↗</i>
+          <strong>Contract verificat</strong>
+          <small>ERC-20 · OpenZeppelin · Solidity 0.8.28</small>
+          <i>Vezi codul verificat ↗</i>
         </a>
         <a className="stat-card" href={TOKEN_URL} target="_blank" rel="noreferrer">
           <span>SUPPLY TOTAL</span>
