@@ -13,6 +13,10 @@ signers, quorum, signer-replacement procedures, and secure backups. Ownership
 transfer should use a two-step acceptance process so that an incorrect address
 cannot receive control accidentally.
 
+The current `RIXTMMainnet` candidate implements this two-step process. The
+planned multisig quorum is 2-of-3; signer addresses are not yet selected. See
+[the multisig setup plan](MULTISIG_SETUP.md).
+
 ## Emergency pause policy
 
 The pause capability will be retained for Mainnet as an emergency security
@@ -46,4 +50,3 @@ multisig approves it.
 The final signer identities, quorum, and ownership-renunciation policy remain
 Mainnet launch blockers in the
 [readiness checklist](MAINNET_CHECKLIST.md).
-

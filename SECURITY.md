@@ -9,6 +9,11 @@ Its source is verified on Etherscan, but the project has not completed an
 independent third-party security audit. Sepolia tokens have no real monetary
 value and must not be treated as Mainnet assets.
 
+The repository also contains a separate, undeployed
+[`RIXTMMainnet`](contracts/RIXTMMainnet.sol) candidate. It adds two-step
+ownership transfer but remains unaudited and must not be represented as a live
+or Mainnet-ready contract.
+
 ## Privileged controls and trust assumptions
 
 The current contract has the following owner-controlled capabilities:
@@ -24,7 +29,8 @@ The current contract has the following owner-controlled capabilities:
 As checked on 2026-07-19, the Sepolia owner is the EOA wallet
 `0x9e8D1e60786F737FB5a88E51A639018451725042`, not a smart-contract multisig.
 The deployed contract is not upgradeable, so code-level ownership changes
-would require a new deployment.
+require a new deployment. The separate Mainnet candidate implements the
+two-step transfer mechanism; it has not replaced the Sepolia deployment.
 
 The supply policy is intentionally flexible below the fixed cap: the owner may
 replace burned supply, but total supply can never exceed 100,000,000 RIXTM.
@@ -32,9 +38,9 @@ The emergency pause capability will be retained for Mainnet and must be
 controlled by a reviewed multisig under the documented
 [governance policy](docs/GOVERNANCE.md). It must not be used to influence price
 or ordinary market activity.
-Before Mainnet, ownership should use a reviewed multisig policy and a two-step
-ownership-transfer mechanism. The intended ownership-renunciation policy must
-still be decided and documented.
+Before Mainnet, ownership should use the reviewed 2-of-3 multisig process in
+[the setup plan](docs/MULTISIG_SETUP.md). The intended ownership-renunciation
+policy must still be decided and documented.
 
 See [the Mainnet readiness checklist](docs/MAINNET_CHECKLIST.md) for the full
 set of launch blockers.

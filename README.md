@@ -16,6 +16,15 @@
 - Tokenomics: [docs/TOKENOMICS.md](docs/TOKENOMICS.md)
 - Governance: [docs/GOVERNANCE.md](docs/GOVERNANCE.md)
 
+## Mainnet candidate
+
+- Source: [contracts/RIXTMMainnet.sol](contracts/RIXTMMainnet.sol)
+- Ownership: OpenZeppelin `Ownable2Step`
+- Planned custody: reviewed 2-of-3 multisig
+- Status: local candidate only; not deployed, independently audited, or ready
+  for Mainnet
+- Multisig preparation: [docs/MULTISIG_SETUP.md](docs/MULTISIG_SETUP.md)
+
 ## Security notice
 
 RIXTM is currently a testnet deployment and has no real monetary value. Etherscan
