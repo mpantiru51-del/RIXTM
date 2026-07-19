@@ -7,3 +7,6 @@
 node_modules
 npm-debug.log*
 *.pem
+public/rixtm-exact.jpeg
+public/reference-viewer.html
+public/reference.mp4
