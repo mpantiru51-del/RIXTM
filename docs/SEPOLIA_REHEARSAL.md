@@ -132,9 +132,9 @@ Complete every field before marking the rehearsal finished:
 - Tested Git commit: `TBD`
 - Rehearsal date and reviewers: `TBD`
 - Deployer public address: `TBD`
-- Signer A public address: `TBD`
-- Signer B public address: `TBD`
-- Signer C public address: `TBD`
+- Signer A public address: `0x9e8D1e60786F737FB5a88E51A639018451725042`
+- Signer B public address: `0xA8d024c92f19C247aBAafA1f604DE0536c139Af0`
+- Signer C public address: `0x5272768D0396f9ED101cE8E6ff14CD008B08E79C`
 - Multisig address and creation transaction: `TBD`
 - Harmless 2-of-3 test transaction: `TBD`
 - Candidate address and deployment transaction: `TBD`

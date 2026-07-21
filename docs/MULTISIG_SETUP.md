@@ -19,9 +19,9 @@ files.
 
 ## Signer worksheet
 
-- Signer A public address: `TBD`
-- Signer B public address: `TBD`
-- Signer C public address: `TBD`
+- Signer A public address: `0x9e8D1e60786F737FB5a88E51A639018451725042`
+- Signer B public address: `0xA8d024c92f19C247aBAafA1f604DE0536c139Af0`
+- Signer C public address: `0x5272768D0396f9ED101cE8E6ff14CD008B08E79C`
 - Approval threshold: `2 of 3`
 - Signer replacement process: `TBD`
 - Emergency contact process: `TBD`
