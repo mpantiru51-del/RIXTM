@@ -2,8 +2,10 @@
 
 ## Status
 
-No RIXTM multisig has been created yet. The plan below is preparation only and
-does not authorize an on-chain deployment or ownership transfer.
+The RIXTM 2-of-3 Safe was created successfully on Ethereum Sepolia on
+2026-07-21. It is active but has not yet been funded or used for the required
+harmless 2-of-3 test transaction. This record does not authorize a Mainnet
+deployment or an ownership transfer.
 
 ## Recommended structure
 
@@ -25,6 +27,16 @@ files.
 - Approval threshold: `2 of 3`
 - Signer replacement process: `TBD`
 - Emergency contact process: `TBD`
+
+## Active Sepolia Safe
+
+- Network: `Ethereum Sepolia`
+- Safe address: `0xaA732ed2d17de570f7A8fE3A7406493E31c4788A`
+- Creation transaction: [`0xe649c8389a2b33e6ddb0443a0fb78a92c81625d183778e35feda505e3085f92b`](https://sepolia.etherscan.io/tx/0xe649c8389a2b33e6ddb0443a0fb78a92c81625d183778e35feda505e3085f92b)
+- Creation status: `Success`
+- Created by: `0x9e8D1e60786F737FB5a88E51A639018451725042` (Signer A)
+- Safe interface: [Open the RIXTM Sepolia Safe](https://app.safe.global/home?safe=sep:0xaA732ed2d17de570f7A8fE3A7406493E31c4788A)
+- Harmless 2-of-3 test transaction: `TBD`
 
 ## Sepolia rehearsal
 
