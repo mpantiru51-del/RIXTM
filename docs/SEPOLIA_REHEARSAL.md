@@ -2,9 +2,11 @@
 
 ## Status and scope
 
-This runbook is prepared but has not been executed. It is for Ethereum Sepolia
-only. It does not authorize a Mainnet deployment, use of real funds, or an
-ownership transfer on the existing RIXTM Sepolia contract.
+This runbook is partially executed. The RIXTM 2-of-3 Safe has been created and
+activated on Ethereum Sepolia, but the harmless 2-of-3 test transaction and the
+candidate deployment have not been performed. This runbook is for Sepolia only.
+It does not authorize a Mainnet deployment, use of real funds, or an ownership
+transfer on the existing RIXTM Sepolia contract.
 
 The rehearsal deploys a new `RIXTMMainnet` candidate. The existing contract at
 `0x274C858E052A7566F645d9C1918ACe26d5CC821d` must remain unchanged.
@@ -73,11 +75,16 @@ expected initial owner.
 
 ## 4. Prepare the multisig
 
-Create the reviewed Sepolia 2-of-3 multisig and execute one harmless transaction
-with two independent approvals. Add its address to `.env` as
-`RIXTM_MULTISIG_ADDRESS`, then run `npm run rehearsal:validate` again. The
-validator rejects an EOA address and accepts only a deployed smart contract on
-Sepolia.
+The Sepolia 2-of-3 Safe was created successfully on 2026-07-21:
+
+- Safe address: `0xaA732ed2d17de570f7A8fE3A7406493E31c4788A`
+- Creation transaction: [`0xe649c8389a2b33e6ddb0443a0fb78a92c81625d183778e35feda505e3085f92b`](https://sepolia.etherscan.io/tx/0xe649c8389a2b33e6ddb0443a0fb78a92c81625d183778e35feda505e3085f92b)
+- Creation status: `Success`
+
+The Safe must still execute one harmless transaction with two independent
+approvals. Add its address to `.env` as `RIXTM_MULTISIG_ADDRESS`, then run
+`npm run rehearsal:validate` again. The validator rejects an EOA address and
+accepts only a deployed smart contract on Sepolia.
 
 ## 5. Propose the two-step ownership transfer
 
@@ -135,7 +142,7 @@ Complete every field before marking the rehearsal finished:
 - Signer A public address: `0x9e8D1e60786F737FB5a88E51A639018451725042`
 - Signer B public address: `0xA8d024c92f19C247aBAafA1f604DE0536c139Af0`
 - Signer C public address: `0x5272768D0396f9ED101cE8E6ff14CD008B08E79C`
-- Multisig address and creation transaction: `TBD`
+- Multisig address and creation transaction: `0xaA732ed2d17de570f7A8fE3A7406493E31c4788A`; [`0xe649c8389a2b33e6ddb0443a0fb78a92c81625d183778e35feda505e3085f92b`](https://sepolia.etherscan.io/tx/0xe649c8389a2b33e6ddb0443a0fb78a92c81625d183778e35feda505e3085f92b)
 - Harmless 2-of-3 test transaction: `TBD`
 - Candidate address and deployment transaction: `TBD`
 - Etherscan verification link: `TBD`
