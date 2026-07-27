@@ -20,7 +20,7 @@
     "@nomicfoundation/hardhat-toolbox-viem": "^5.0.7",
     "dotenv": "^17.4.2",
     "ethers": "^6.17.0",
-    "hardhat": "^3.10.0",
+    "hardhat": "^3.11.1",
     "typescript": "~6.0.3"
   },
   "overrides": {
